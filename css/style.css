@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Merriweather', serif;
+}
+
+.org {
+    background-color: rgb(244, 98, 58);
+    color: #ffffff;
+
+}
+
+.white{
+    background-color: #ffffff;
+}
+.pad-5{
+    padding: 5rem 0px;
+}
+.container {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+a {
+    text-decoration: none;
+    
+    color: black;
+}
+.content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+
+/* -----------header-------- */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999999999999999999999999999;
+    background-color: rgb(70, 66, 66);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-transform: capitalize;
+}
+
+.navbar .logo a {
+    color: #ffffff;
+    text-transform: capitalize;
+    font-weight: 700;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.navbar label {
+    padding: 8px;
+}
+
+.navbar label i.fa-solid {
+    color: #242323;
+    padding: 5px 10px;
+    font-size: 1.8rem;
+    border-radius: 3px;
+    border: 1px solid #353333;
+    line-height: inherit;
+}
+.navbar input[type='checkbox']:checked ~ label i {
+    /* box-shadow: 0px 0px 3px 0px #000000 ; */
+    outline: thick solid #333333;
+    
+}
+
+.navbar input[type='checkbox'] {
+    display: none;
+}
+
+nav {
+    display: none;
+    width: 100%;
+}
+
+.navbar input[type='checkbox']:checked ~ nav {
+    display: block
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li a {
+    padding: 15px 0;
+    color: #ffffff;
+    border-top: 1px solid rgb(82, 81, 81);
+    width: 100%;
+    font-weight: 600;
+    transition: color 1s;
+    display: inline-block;
+}
+nav ul li a:hover{
+    color: rgb(172, 45, 9);
+}
+/* ---------home--------- */
+#sec1 {
+
+    background: linear-gradient(rgba(110, 84, 61, 0.6), rgba(110, 84, 61, 0.6)), url('../images/bg-masthead.jpg') no-repeat center/cover;
+}
+
+
+.home {
+    height: 100vh;
+}
+
+.home .home-title {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: rgb(248, 249, 250);
+    margin-bottom: 10px;
+    font-weight: 500;
+
+}
+
+.line {
+    width: 50px;
+    height: 3px;
+    display: inline-block;
+
+}
+
+.home p ,.title ~ p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1rem;
+    padding: 2.5rem 0px;
+    line-height: 1.6;
+}
+
+.find-more {
+    padding: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: all .5s;
+    display: inline-block;
+
+}
+
+.home .find-more:hover {
+    background-color: rgb(172, 45, 9);
+}
+/* ------------about--------- */
+ 
+.about{
+    height: 100vh;
+}
+.title{
+    font-size: 2rem;
+    text-align: center;
+
+}
+.title::first-letter{
+    text-transform: capitalize;
+}
+
+.capital{
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+/* ------services----------- */
+#sec3{
+    text-align: center;
+}
+
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+}
+.services-item{
+    width: 100%;
+    padding: 1rem .3rem;
+    margin-bottom: 1rem;
+}
+.services-item i{
+    color: rgb(244, 98, 58);
+    font-size: 2.2rem;
+
+}
+.services-item .item-title{
+    padding : 1rem 0 .5rem;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.services-item .item-desc{
+    color: rgb(71, 68, 68);
+    font-size: 1.2rem;
+
+}
+.services-item .item-desc::first-letter{
+    text-transform: capitalize;
+}
+
+/* --------portfolio--------- */
+#sec4{
+    padding-top: 3rem;
+}
+.galary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.galary .photo {
+    width: 100%;
+    position: relative;
+
+}
+.galary .photo img{
+    display: block;
+    width: 100%;
+}
+.galary .photo .category{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(244, 98, 58,.7);
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    color: #ffffff;
+    display: none;
+}
+.galary .photo:hover .category{
+    display: flex;
+}
+.galary .photo .category .category-title{
+    font-size: 1.4rem;
+}
+
+.portfolio{
+    padding: 7rem 0;
+    background-color: #242323;
+    color: #ffffff;
+    text-align: center;
+}
+.portfolio .port-title{
+    text-transform: capitalize;
+    font-weight: 400;
+    white-space: nowrap;
+    padding-bottom: 1rem;
+}
+.portfolio .find-more{
+    background-color: rgb(248, 249, 250);
+    margin-top: 1rem;
+}
+
+/* --------contact-------- */
+#sec5{
+    padding: 7rem 0rem  3rem;
+}
+#sec5 .title{
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 1.7rem;
+    color: rgb(33,37,41);
+}
+#sec5 p{
+ color: rgb(82, 81, 81);
+ padding: 10px 0;
+}
+
+.contact form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    
+}
+.contact form > *{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.contact form input ,.contact form textarea{
+    padding: 15px;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid rgb(221, 218, 218);
+    font-family: 'Merriweather',serif;
+    font-weight: 400;
+}
+.contact form input:focus ,.contact form textarea:focus{
+    border-color: #f4623a !important;
+    box-shadow: 0 0 5px 0.25rem #f4623a !important;
+}
+.contact form textarea{
+    height: 140px;
+}
+.contact form button{
+    border: none;
+    outline: none;
+    width: 80%;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-family: 'Merriweather',serif;
+    font-size: 1.2rem;
+    padding: 16px 0;
+}
+
+i.icon-up{
+    position: sticky;
+    top: 90%;
+    left: 95%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: rgb(244, 98, 58);
+    color: white;
+    z-index: 555555555555555;
+}
